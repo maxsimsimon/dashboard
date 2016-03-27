@@ -118,11 +118,14 @@ body {
 }
 .Master{
 display: flex;
-justify-content: space-around;
+padding-left: 50px;
+padding-right: 50px;
+min-width: 1290px;
 }
 .Colonne {
-	flex: 1;
+	flex: 0 0 400px;
 	margin-left: 10px;
+	margin-right: 10px;
 	position: relative;
 }
 .Block {
@@ -268,7 +271,7 @@ justify-content: space-around;
 } 	
 .CouleurVerbatime{
 	background-color: #26A057;
-	width: 340px;
+	width: 100%;
 	height:10px;
 	position: absolute;
 	float: left;
