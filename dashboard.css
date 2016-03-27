@@ -1,0 +1,324 @@
+
+*{box-sizing:border-box;
+}
+body {
+	background:#172230;
+	color:white;
+}
+/** initial setup **/
+.nano {
+  position : relative;
+  width    : 100%;
+  height   : 100%;
+  overflow : hidden;
+}
+.nano > .nano-content {
+  position      : absolute;
+  overflow      : scroll;
+  overflow-x    : hidden;
+  top           : 0;
+  right         : 0;
+  bottom        : 0;
+  left          : 0;
+}
+.nano > .nano-content:focus {
+  outline: thin dotted;
+}
+.nano > .nano-content::-webkit-scrollbar {
+  display: none;
+}
+.has-scrollbar > .nano-content::-webkit-scrollbar {
+  display: block;
+}
+.nano > .nano-pane {
+  background : rgba(0,0,0,.25);
+  position   : absolute;
+  width      : 10px;
+  right      : 0;
+  top        : 0;
+  bottom     : 0;
+  visibility : hidden\9; /* Target only IE7 and IE8 with this hack */
+  opacity    : .01;
+  -webkit-transition    : .2s;
+  -moz-transition       : .2s;
+  -o-transition         : .2s;
+  transition            : .2s;
+  -moz-border-radius    : 5px;
+  -webkit-border-radius : 5px;
+  border-radius         : 5px;
+}
+.nano > .nano-pane > .nano-slider {
+  background: #444;
+  background: rgba(0,0,0,.5);
+  position              : relative;
+  margin                : 0 1px;
+  -moz-border-radius    : 3px;
+  -webkit-border-radius : 3px;
+  border-radius         : 3px;
+}
+.nano:hover > .nano-pane, .nano-pane.active, .nano-pane.flashed {
+  visibility : visible\9; /* Target only IE7 and IE8 with this hack */
+  opacity    : 0.99;
+}
+.Chargement{
+	width: 100%;
+	height: 100%;
+	background-color: red;
+	z-index: 2;
+	position: fixed;
+	opacity: 100;
+	-webkit-transition:2s 4s;
+	transition: 2s 4s;
+}
+.Chargement:hover{
+	opacity: 0;
+}
+.TopMenu{
+	background-color: #23303f;
+	width: 110%;
+	height:80px;
+	position: fixed;
+	margin-top: 0px;
+	z-index: 0.9;
+	float: left;
+	box-shadow: 0px 3px 30px #0C0F16;
+}
+.NomEtPrenom{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	text-align: right;
+	margin-right: 250px;
+	margin-top: 10px;
+	margin-bottom: 9px;
+	
+	}
+.Poste{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 100;
+	line-height: 0px;
+	margin-top: 0px;
+	text-align: right;
+	margin-right: 250px;
+}
+
+.MenuTitre {
+	margin-left: 80px;
+	margin-top: 100px;
+
+}
+
+.Menu {
+	background-color:#1C2A3A;
+	width: 250px;
+	height: 100%;
+	float: left;
+	position: fixed;
+	box-shadow: 3px 0px 30px #0C0F16;
+	z-index: 1;
+}
+.Master{
+display: flex;
+justify-content: space-around;
+}
+.Colonne {
+	flex: 1;
+	margin-left: 10px;
+	position: relative;
+}
+.Block {
+	background:white;
+	color:#333;
+	margin-bottom: 3px;
+	padding: 5px 0px 5px 20px;
+
+}
+
+.Twitter {
+	background-color: #23303f;
+	box-shadow: 0px 3px 30px #0C0F16; 
+	overflow: auto;
+} 	
+.CouleurTwitter {
+	background-color: #55acee;
+	width: 250px;
+	height:10px;
+	position: absolute;
+	float: left;
+	-webkit-transition: height 0.5s;
+	transition: 0.5s;
+	z-index: 1;
+}
+.Twitter:hover .CouleurTwitter{
+	height: 40px;
+}
+.TitreTwitter{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	margin-left: 20px;
+	margin-top: 0px;
+	opacity: 0;
+	-webkit-transition: opacity 0.2s, margin-top 0.2s;
+	transition: opacity 0.2s, margin-top 0.2s;
+}
+.Twitter:hover .TitreTwitter{
+	opacity: 1;
+	margin-top: 8px;
+	-webkit-transition: opacity 0.2s 0.1s, margin-top 0.2s 0.1s;
+	transition: opacity 0.2s 0.1s, margin-top 0.2s 0.1s;
+}
+.BlockMort{
+	background-color: #23303f;
+	width: 200px;
+	height:40px;
+}
+.BlockTwitter{
+	background-color: #172230;
+	width: 200px;
+	height: 80px;
+	margin: auto;
+	margin-top: 10px;
+
+}
+.Instagram {
+	background-color: #23303f;
+	box-shadow: 0px 3px 30px #0C0F16; 
+	overflow: auto;
+} 	
+.CouleurInstagram{
+	background-color: #335D87;
+	width: 250px;
+	height:10px;
+	position: absolute;
+	float: left;
+	-webkit-transition: height 0.5s;
+	transition: 0.5s;
+	z-index: 1;
+}
+.Instagram:hover .CouleurInstagram{
+	height: 40px;
+}
+.TitreInstagram{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	margin-left: 20px;
+	margin-top: 0px;
+	-webkit-transition: opacity 0.2s, margin-top 0.2s;
+	transition: opacity 0.2s, margin-top 0.2s;
+	opacity: 0;
+}
+.Instagram:hover .TitreInstagram{
+	opacity: 100;
+	margin-top: 8px;
+	-webkit-transition: opacity 0.2s 0.1s, margin-top 0.2s 0.1s;
+	transition: opacity 0.2s 0.1s, margin-top 0.2s 0.1s;
+}
+.BlockInstagram{
+	background-color: #172230;
+	width: 200px;
+	height: 200px;
+	margin: auto;
+	margin-top: 10px;
+}
+.Actu{
+	background-color: #23303f;
+	box-shadow: 0px 3px 30px #0C0F16; 
+	overflow: auto;
+} 	
+.CouleurActu{
+	background-color: #128C78;
+	width: 100%;
+	height:10px;
+	position: absolute;
+	float: left;
+	-webkit-transition: height 0.5s;
+	transition: 0.5s;
+	z-index: 2;
+}
+.Actu:hover .CouleurActu{
+	height: 40px;
+}
+.TitreActu{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	margin-left: 20px;
+	margin-top: 0px;
+	-webkit-transition: opacity 0.2s, margin-top 0.2s;
+	transition: opacity 0.2s, margin-top 0.2s;
+	opacity: 0;
+}
+.Actu:hover .TitreActu{
+	opacity: 100;
+	margin-top: 8px;
+	-webkit-transition: opacity 0.2s 0.1s, margin-top 0.2s 0.1s;
+	transition: opacity 0.2s 0.1s, margin-top 0.2s 0.1s;
+}
+.BlockActu{
+	background-color: #172230;
+	width: 350px;
+	height: 200px;
+	margin: auto;
+	margin-top: 10px;
+
+}
+.Verbatime{
+	background-color: #23303f;
+	/*margin-top: 355px;*/
+	box-shadow: 0px 3px 30px #0C0F16; 
+	overflow: auto;
+} 	
+.CouleurVerbatime{
+	background-color: #26A057;
+	width: 340px;
+	height:10px;
+	position: absolute;
+	float: left;
+	-webkit-transition: height 0.5s;
+	transition: 0.5s;
+}
+.Verbatime:hover .CouleurVerbatime{
+	height: 40px;
+}
+.TitreVerbatime{
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	margin-left: 20px;
+	margin-top: 8px;
+	-webkit-transition: opacity 0.2s;
+	transition: opacity 0.2s;
+	opacity: 0;
+}
+.Verbatime:hover .TitreVerbatime{
+	opacity: 100;
+}
+.BlockVerbatime{
+	background-color: #172230;
+	width: 310px;
+	height: 160px;
+	margin: auto;
+	margin-top: 10px;
+	padding-left: 13px;
+	padding-right: 13px;
+	padding-top: 30px;
+
+}
+.Rechargement{
+	width: 55px;
+	margin-top: 548px;
+	margin-left: 1360px;
+	position: fixed;
+	z-index: 2;
+}
+.Timeline{
+	margin-top: 775px;
+	position: fixed;
+	width: 100%;
+	height: 100px;
+}
+.Line{
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+	height: 1px;
+	background-color: white;
+	opacity: .5;
+}
